@@ -9,9 +9,11 @@ function App() {
   return (
     <>
       <Hero />
+
       <Skills />
       <Profile />
       <Projects />
+
       <Footer />
     </>
   )
