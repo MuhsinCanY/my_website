@@ -14,12 +14,12 @@ export default function ProjectBox({ project }) {
         <p className="text-[#383838] dark:text-[#FFFFFF] leading-5  text-left font-[Inter] font-normal text-[16px]  ">
           {project.context}
         </p>
-        <div className="flex gap-4 py-2">
+        <div className="flex flex-wrap gap-4 py-2">
           {project.techStack.map((tech, i) => {
             return (
               <a
                 href="#"
-                className="bg-p_blue dark:bg-[#8173DA] text-white px-5 py-2 shadow-lg drop-shadow-lg rounded-full font-[Inter] font-normal leading-3 text-[14px]"
+                className="bg-p_blue dark:bg-[#8173DA] text-white px-5 py-2 shadow-lg drop-shadow-lg rounded-full font-[Inter] font-normal leading-3 text-[14px] hover:text-white hover:bg-[#4531b7]"
               >
                 {tech}
               </a>
