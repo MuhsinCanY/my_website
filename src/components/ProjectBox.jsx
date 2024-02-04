@@ -19,7 +19,7 @@ export default function ProjectBox({ project }) {
             return (
               <a
                 href="#"
-                className="bg-p_blue dark:bg-[#8173DA] text-white px-5 py-2 shadow-lg drop-shadow-xl rounded-full font-[Inter] font-normal leading-3 text-[14px]"
+                className="bg-p_blue dark:bg-[#8173DA] text-white px-5 py-2 shadow-lg drop-shadow-lg rounded-full font-[Inter] font-normal leading-3 text-[14px]"
               >
                 {tech}
               </a>
