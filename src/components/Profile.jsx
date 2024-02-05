@@ -1,29 +1,7 @@
 import React from 'react'
 import ProfileBox from './ProfileBox'
 
-const profile = {
-  profileTitle: 'Profile',
-  info: {
-    title: 'Basic Information',
-    info: [
-      { question: 'Date of birth', answer: '07.07.1998' },
-      { question: 'City of Residence', answer: 'Ankara/Turkey' },
-      {
-        question: 'Educational Status',
-        answer: 'Hacettepe Univ. Bachelor of Mathematics, 2022',
-      },
-      { question: 'Preferred Role', answer: 'Frontend, UI' },
-    ],
-  },
-  img: '/assets/profile/profile.png',
-  aboutMe: {
-    title: 'About Me',
-    content:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.    Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam  magnam!',
-  },
-}
-
-export default function Profile() {
+export default function Profile({ profile }) {
   return (
     <div className="main bg-p_blue dark:bg-[#171043] flex  items-center justify-center">
       <div className="container flex  flex-col gap-10 py-16 lg:p-16 p-4">

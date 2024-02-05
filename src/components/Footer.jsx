@@ -7,20 +7,14 @@ import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-const footer = {
-  title: 'Send me a message!',
-  content: 'Got a question or proposal, or just want to say hello? Go ahead.',
-  mail: 'almilasucode@gmail.com',
-}
-
-export default function Footer() {
+export default function Footer({ footer }) {
   return (
     <div className="main dark:bg-[#252128] flex  items-center justify-center dark:text-[#8F88FF]">
       <div className="container flex justify-center items-center flex-col gap-10 p-16">
         <h2 className="text-p_blue drop-shadow-xl text-center lg:text-left font-[Inter] dark:text-[#8F88FF] font-bold lg:text-5xl text-3xl">
           {footer.title}
         </h2>
-        <p className="text-[#120B39] dark:text-white text-center leading-7 drop-shadow-md font-[Inter] font-normal text-[18px] lg:text-[24px] w-[410px]">
+        <p className="text-[#120B39] dark:text-white text-center leading-7 drop-shadow-md font-[Inter] font-normal text-[18px] lg:text-[24px] lg:w-[410px]">
           {footer.content}
         </p>
         <a

@@ -1,19 +1,7 @@
 import React from 'react'
 import { SkillBox } from './SkillBox'
 
-const skills = {
-  skillTitle: 'Skills',
-  skillBox: [
-    { img: '/assets/skills/Javascript.png', name: 'JAVASCRIPT' },
-    { img: '/assets/skills/React.png', name: 'REACT' },
-    { img: '/assets/skills/Redux.png', name: 'REDUX' },
-    { img: '/assets/skills/Node.png', name: 'NODE' },
-    { img: '/assets/skills/VSCode.png', name: 'VS CODE' },
-    { img: '/assets/skills/Figma.png', name: 'FIGMA' },
-  ],
-}
-
-export default function Skills() {
+export default function Skills({ skills }) {
   return (
     <div className="main bg-slate-50 flex  items-center justify-center dark:bg-[#252128]">
       <div className="container flex flex-col lg:flex-row gap-10 p-16">
