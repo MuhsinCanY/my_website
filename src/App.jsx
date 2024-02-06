@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import { useLocalStorage } from './hooks/localStorage'
 import { language } from './langSupport'
+import axios from 'axios'
 
 function App() {
   const [lang, setLang] = useLocalStorage('lang', 'en')
@@ -19,10 +20,18 @@ function App() {
   const langChangeHandler = () => {
     if (lang == 'tr') {
       setLang('en')
-      setContent(language.en)
+      axios
+        .post('https://reqres.in/api/users', language.en)
+        .then(function (response) {
+          setContent(response.data)
+        })
     } else {
       setLang('tr')
-      setContent(language.tr)
+      axios
+        .post('https://reqres.in/api/users', language.tr)
+        .then(function (response) {
+          setContent(response.data)
+        })
     }
   }
 
