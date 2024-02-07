@@ -6,6 +6,7 @@ import {
 import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Email } from 'react-obfuscate-email'
 
 export default function Footer({ footer }) {
   return (
@@ -21,7 +22,12 @@ export default function Footer({ footer }) {
           href="#"
           className="underline underline-offset-4 text-[20px] text-p_blue dark:text-[#8F88FF] drop-shadow-md leading-3 font-[Inter] "
         >
-          {footer.mail}
+          <Email
+            email={footer.mail}
+            target="_blank"
+            subject="Hi 👋"
+            body="You can say hello..."
+          />
         </a>
         <div className="flex gap-8">
           <FontAwesomeIcon
