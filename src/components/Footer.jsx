@@ -9,7 +9,7 @@ import React from 'react'
 
 export default function Footer({ footer }) {
   return (
-    <div className="main dark:bg-[#252128] flex  items-center justify-center dark:text-[#8F88FF]">
+    <div className="main bg-white dark:bg-[#252128] flex  items-center justify-center dark:text-[#8F88FF]">
       <div className="container flex justify-center items-center flex-col gap-10 p-16">
         <h2 className="text-p_blue drop-shadow-xl text-center lg:text-left font-[Inter] dark:text-[#8F88FF] font-bold lg:text-5xl text-3xl">
           {footer.title}
