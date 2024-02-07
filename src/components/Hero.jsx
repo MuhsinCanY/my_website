@@ -11,7 +11,7 @@ export default function Hero({
 }) {
   return (
     <div className="main lg:bg-gradient-to-r lg:from-p_blue lg:dark:from-[#171043] lg:from-50% lg:to-p_green lg:dark:to-[#1A210B] lg:to-50%  flex flex-col  items-center justify-center font-[Inter]">
-      <div className="container  flex w-[100%] bg-p_blue dark:bg-[#171043] py-6  dark:lg:bg-transparent gradientCustom">
+      <div className="container flex w-[100%] bg-p_blue dark:bg-[#171043] py-6  dark:lg:bg-transparent gradientCustom">
         <div className="basis-[75%]">{}</div>
         <button
           onClick={langChangeHandler}
@@ -27,7 +27,7 @@ export default function Hero({
           {!darkMode ? hero.theme.dark : hero.theme.light}
         </button>
       </div>
-      <div className="container flex  bg-p_blue dark:bg-[#171043] dark:lg:bg-transparent flex-col gap-10 p-16 pt-0 gradientCustom">
+      <div className="container flex bg-p_blue dark:bg-[#171043] dark:lg:bg-transparent flex-col gap-10 p-16 pt-0 gradientCustom">
         <h1 className="text-p_green  drop-shadow-xl text-left  dark:text-p_green  font-bold text-3xl">
           {hero.name}
         </h1>

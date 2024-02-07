@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -7,31 +6,35 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import { useLocalStorage } from './hooks/localStorage'
 import { language } from './langSupport'
-import axios from 'axios'
+import useAxios, { REQ_TYPES } from './hooks/useAxios'
 
 function App() {
   const [lang, setLang] = useLocalStorage('lang', 'en')
-  const [content, setContent] = useState(
-    lang == 'tr' ? language.tr : language.en
-  )
+  const {
+    data: content,
+    setData: setContent,
+    loading,
+    error,
+    doRequest,
+  } = useAxios(lang == 'tr' ? language.tr : language.en)
 
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', false)
 
   const langChangeHandler = () => {
     if (lang == 'tr') {
       setLang('en')
-      axios
-        .post('https://reqres.in/api/users', language.en)
-        .then(function (response) {
-          setContent(response.data)
-        })
+      doRequest({
+        endpoint: '/users',
+        reqType: REQ_TYPES.POST,
+        payload: language.en,
+      })
     } else {
       setLang('tr')
-      axios
-        .post('https://reqres.in/api/users', language.tr)
-        .then(function (response) {
-          setContent(response.data)
-        })
+      doRequest({
+        endpoint: '/users',
+        reqType: REQ_TYPES.POST,
+        payload: language.tr,
+      })
     }
   }
 
