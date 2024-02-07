@@ -1,11 +1,7 @@
-import {
-  faCodepen,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+// import { Button } from '@material-tailwind/react'
+import { ButtonGroup, Button } from '@mui/material'
+import React, { useState } from 'react'
 import { Email } from 'react-obfuscate-email'
 
 export default function Footer({ footer }) {
@@ -29,26 +25,17 @@ export default function Footer({ footer }) {
             body="You can say hello..."
           />
         </a>
+
         <div className="flex gap-8">
-          <FontAwesomeIcon
-            icon={faTwitter}
-            className="text-p_blue dark:text-[#8F88FF] text-[33px] hover:text-[#090f3e] drop-shadow-md "
-          />
-          <FontAwesomeIcon
-            icon={faCodepen}
-            size="2xl"
-            className="text-p_blue dark:text-[#8F88FF] text-[33px] hover:text-[#090f3e] drop-shadow-md"
-          />
-          <FontAwesomeIcon
-            icon={faAt}
-            size="2xl"
-            className="text-p_blue dark:text-[#8F88FF] text-[33px] hover:text-[#090f3e] drop-shadow-md"
-          />
-          <FontAwesomeIcon
-            icon={faInstagram}
-            size="2xl"
-            className="text-p_blue dark:text-[#8F88FF] text-[33px] hover:text-[#090f3e] drop-shadow-md"
-          />
+          {footer.icons.map((icon, i) => {
+            return (
+              <FontAwesomeIcon
+                key={i}
+                icon={icon}
+                className="text-p_blue dark:text-[#8F88FF] text-[39px] hover:text-[#090f3e] drop-shadow-md "
+              />
+            )
+          })}
         </div>
       </div>
     </div>

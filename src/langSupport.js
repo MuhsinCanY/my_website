@@ -1,3 +1,10 @@
+import {
+  faCodepen,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
+
 const en = {
   hero: {
     name: 'almila',
@@ -67,6 +74,7 @@ const en = {
     title: 'Send me a message!',
     content: 'Got a question or proposal, or just want to say hello? Go ahead.',
     mail: 'almilasucode@gmail.com',
+    icons: [faTwitter, faCodepen, faAt, faInstagram],
   },
 }
 
@@ -140,6 +148,7 @@ const tr = {
     content:
       'Bir sorunuz veya öneriniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Devam etmek.',
     mail: 'almilasucode@gmail.com',
+    icons: [faTwitter, faCodepen, faAt, faInstagram],
   },
 }
 
