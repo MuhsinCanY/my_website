@@ -42,11 +42,7 @@ export default function Hero({
             <div className="flex flex-wrap gap-4 ">
               <a
                 href="#"
-<<<<<<< HEAD
                 className="bg-white dark:bg-[#252128] text-p_blue dark:text-white px-5 py-3 shadow-lg drop-shadow-lg rounded-md ] font-normal leading-3 text-[18px] border border-solid border-white"
-=======
-                className="bg-white dark:bg-[#252128] text-p_blue dark:text-white px-5 py-3 shadow-lg drop-shadow-lg rounded-md ] font-normal leading-3 text-[18px] dark:hover:bg-[#000000] hover:bg-[#ffffff] border border-solid border-white"
->>>>>>> origin/main
               >
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -57,11 +53,7 @@ export default function Hero({
               </a>
               <a
                 href="#"
-<<<<<<< HEAD
                 className="bg-white dark:bg-[#252128] text-p_blue dark:text-white px-5 py-3 shadow-lg drop-shadow-lg rounded-md  font-normal leading-3 text-[18px] border border-solid border-white"
-=======
-                className="bg-white dark:bg-[#252128] text-p_blue dark:text-white px-5 py-3 shadow-lg drop-shadow-lg rounded-md  font-normal leading-3 text-[18px] dark:hover:bg-[#000000] border border-solid border-white"
->>>>>>> origin/main
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}
