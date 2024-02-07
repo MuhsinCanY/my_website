@@ -1,7 +1,8 @@
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Switch } from '@material-tailwind/react'
 import React from 'react'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import { MaterialUISwitch } from './MaterialUISwitch'
 
 export default function Hero({
   hero,
@@ -19,14 +20,19 @@ export default function Hero({
         >
           {hero.lang}
         </button>
-        <button
-          onClick={darkModeChangeHandler}
-          href="#"
-          className="font-bold -translate-x-1/2 w-[145px] text-black dark:text-[#D9D9D9] hover:text-[#343434] text-[15px]"
-        >
-          {!darkMode ? hero.theme.dark : hero.theme.light}
-        </button>
+        <FormControlLabel
+          className="-translate-x-[35px]"
+          control={<MaterialUISwitch />}
+          label={
+            <p className="font-bold  w-[145px] text-black dark:text-[#D9D9D9] hover:text-[#343434] text-[15px]">
+              {!darkMode ? hero.theme.dark : hero.theme.light}
+            </p>
+          }
+          onChange={darkModeChangeHandler}
+          checked={darkMode}
+        />
       </div>
+
       <div className="container flex bg-p_blue dark:bg-[#171043] dark:lg:bg-transparent flex-col gap-10 p-16 pt-0 gradientCustom">
         <h1 className="text-p_green  drop-shadow-xl text-left  dark:text-p_green  font-bold text-3xl">
           {hero.name}
