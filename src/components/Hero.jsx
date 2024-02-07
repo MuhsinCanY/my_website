@@ -10,8 +10,8 @@ export default function Hero({
   darkMode,
 }) {
   return (
-    <div className="main  lg:bg-gradient-to-r lg:from-p_blue lg:dark:from-[#171043] lg:from-75% lg:to-p_green lg:dark:to-[#1A210B] lg:to-75% flex flex-col  items-center justify-center ">
-      <div className="font-[Inter] flex w-[100%] bg-p_blue dark:bg-[#171043] lg:bg-transparent  pt-8 lg:bg-transparent dark:lg:bg-transparent">
+    <div className="main lg:bg-gradient-to-r lg:from-p_blue lg:dark:from-[#171043] lg:from-50% lg:to-p_green lg:dark:to-[#1A210B] lg:to-50%  flex flex-col  items-center justify-center ">
+      <div className="container font-[Inter] flex w-[100%] bg-p_blue dark:bg-[#171043] lg:bg-transparent  py-6 lg:bg-transparent dark:lg:bg-transparent lg:bg-gradient-to-r lg:from-p_blue lg:dark:from-[#171043] lg:from-75% lg:to-p_green lg:dark:to-[#1A210B] lg:to-75%">
         <div className="basis-[75%]">{}</div>
         <button
           onClick={langChangeHandler}
@@ -30,11 +30,11 @@ export default function Hero({
       </div>
       <div
         className="container flex  bg-p_blue dark:bg-[#171043]
-        lg:bg-transparent dark:lg:bg-transparent flex-col gap-10 p-16 pt-0"
+        lg:bg-transparent dark:lg:bg-transparent flex-col gap-10 p-16 pt-0 lg:bg-gradient-to-r lg:from-p_blue lg:dark:from-[#171043] lg:from-75% lg:to-p_green lg:dark:to-[#1A210B] lg:to-75%"
       >
-        <h2 className="text-p_green  drop-shadow-xl text-left  dark:text-p_green font-[Inter] font-bold text-3xl">
+        <h1 className="text-p_green  drop-shadow-xl text-left  dark:text-p_green font-[Inter] font-bold text-3xl">
           {hero.name}
-        </h2>
+        </h1>
         <div className="flex gap-8 flex-col lg:flex-row">
           <div className="basis-3/4 flex flex-col gap-8">
             <h2 className="text-p_green max-w-[450px] mb-6 text-left drop-shadow-xl dark:text-p_green font-[Inter] font-bold text-6xl">
@@ -70,7 +70,7 @@ export default function Hero({
           </div>
           <img
             src={hero.img}
-            className="basis-1/4 aspect-square h-[350px] drop-shadow-xl shadow-lg object-cover rounded-lg"
+            className="basis-1/4 aspect-square h-[350px] drop-shadow-xl shadow-lg object-cover rounded-lg mr-0 lg:mr-20"
           />
         </div>
       </div>
